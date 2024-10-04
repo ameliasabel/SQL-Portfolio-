@@ -1,0 +1,49 @@
+Gaming Industry - Sales 
+Pokemon Game Sales Worldwide as of March 2024 in Millions 
+Source: https://www.statista.com/statistics/1072224/pokemon-unit-sales-worldwide/
+
+This is my frist SQL project on my own. I have chosen an easy topic to practice the basics of SQL. This project will cover querying, filtering, and aggregating data. 
+
+START!
+
+/** Pokemon Games:
+Pokemon Red, Blue, Green (31.38)
+Pokemon Sowrd and Shield (26.27)
+Pokemon Violet and Scarlet (24.92)
+Pokemon Gold and Silver (23.1)
+Pokemon Diamond and Pearl (17.67)
+Pokemon X and Y (16.73)
+Pokemon Sun and Moon (16.33)
+Pokemon Ruby and Sapphire (16.22)
+Pokemon Black and White (15.64)
+Pokemon Let's Go Pikachu and Eevee (15.07)
+Pokemon Legands: Arceus (14.83)
+Pokemon Brilliant Diamond and Shining Pearl (14.65)
+Pokemon Yellow: Special Pikachu Edition (14.64)
+Pokemon Omega Ruby and Alpha Sapphire (14.62) 
+Pokemon Heart Gold and Soul Silver (12.72)
+Pokemon Ultra Sun and Ultra Moon (9.21)
+**/
+
+CREATE TABLE pokemon_games (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, year INTEGER, device TEXT)
+
+INSERT INTO pokemon_games VALUES (1, "Pokemon Red, Blue, Green", 31.38, 1996, GB);
+INSERT INTO pokemon_games VALUES (2, "Pokemon Sword and Shield", 26.27, 2019, S);
+INSERT INTO pokemon_games VALUES (3, "Pokemon Violet ans Scarlet", 24.92, 2022, S);
+INSERT INTO pokemon_games VALUES (4, "Pokemon Gold and Silver", 23.1, 1999, GBC);
+INSERT INTO pokemon_games VALUES (5, "Pokemon Diamond and Pearl", 17.67, 1996, DS);
+INSERT INTO pokemon_games VALUES (6, "Pokemon X and Y", 16.73, 2013, 3DS);
+INSERT INTO pokemon_games VALUES (7, "Pokemon Sun and MOON", 16.33, 2016, 3DS)
+INSERT INTO pokemon_games VALUES (8, "Pokemon Ruby and Sapphire", 16.22, 2002, GBA);
+INSERT INTO pokemon_games VALUES (9, "Pokemon Black and White", 15.64, 2010, DS);
+INSERT INTO pokemon_games VALUES (10, "Pokemon Let's Go Pikachu and Eevee", 15.07, 2018, S);
+INSERT INTO pokemon_games VALUES (11, "Pokemon Legands: Arceus", 14.83, 2022, S);
+INSERT INTO pokemon_games VALUES (12, "Pokemon Brilliant Diamond and Shining Pearl", 14.65, 2021, S);
+INSERT INTO pokemon_games VALUES (13, "Yellow: Pikachu Special Edition", 14.64, 1998, GB);
+INSERT INTO pokemon_games VALUES (14 "Pokemon Omega Ruby and Alpha Sapphire", 14.62, 2014, 3DS);
+INSERT INTO pokemon_games VALUES (15, "Pokemon Heart Gold and Soul Silver", 12.72, 2009, DS);
+INSERT INTO pokemon_games VALUES (16, "Pokemon Ultra Sun and Ultra Moon", 9.21, 2017, 3DS);
+
+SELECT quantity FROM pokemon_games ORDER BY year;
+
+SELECT name FROM pokemon_games WHERE device = "DS" AND device = "S";
